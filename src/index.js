@@ -1,0 +1,24 @@
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import { ProductsProvider } from "./context/products_context";
+import { FilterProvider } from "./context/filter_context";
+import { CartProvider } from "./context/cart_context";
+import { UserProvider } from "./context/user_context";
+
+ReactDOM.render(
+  <UserProvider>
+    <ProductsProvider>
+      <FilterProvider>
+        <CartProvider>
+          <App />
+        </CartProvider>
+      </FilterProvider>
+    </ProductsProvider>
+  </UserProvider>,
+  document.getElementById("root")
+);
+
+// dev-r0wdoamx.us.auth0.com
+// JnPKDezrN1kfsJyKqYt8lVlXrSzGN34t
